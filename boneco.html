@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="1900" height="920"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    //Cor de Fundo
+    pincel.fillStyle = 'Gainsboro';
+    pincel.fillRect(0, 0, 1900, 920);
+
+    //Tronco do boneco
+    pincel.fillStyle = 'LightSkyBlue';
+    pincel.fillRect(840, 280, 200, 400);
+
+    //Calça do boneco
+    pincel.fillStyle = 'DarkSlateGray';
+    pincel.fillRect(840, 680, 60, 200);
+    pincel.fillRect(980, 680, 60, 200);
+
+    //Tênis do boneco
+    pincel.fillStyle = 'BurlyWood';
+    pincel.fillRect(840, 880, 60, 40);
+    pincel.fillRect(980, 880, 60, 40);
+
+    //Braços do boneco
+    pincel.fillStyle = 'Seashell';
+    pincel.fillRect(1040, 290, 200, 40);
+    pincel.fillRect(640, 290, 200, 40);
+
+    //Pescoço do boneco
+    pincel.fillStyle = 'Seashell';
+    pincel.fillRect(910, 210, 50, 70);
+
+    //Cabeça do boneco
+    pincel.beginPath();
+    pincel.arc(935, 197, 60, 70, 2 * 3,14);
+    pincel.fill();
+
+</script>
+</body>
+</html>

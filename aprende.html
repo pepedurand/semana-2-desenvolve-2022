@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="aprendi">aprendi</button>
+    <button id="naoaprendi">não aprendi</button>
+
+    <style>
+        button {
+
+            font: normal 15pt Arial;
+            margin-top: 300px;
+            background-color: cadetblue;
+            color: white;
+        }
+    </style>
+
+    <script>
+
+        var botaoAprendi = document.querySelector("button#aprendi");
+        var botaoNaoAprendi = document.querySelector("button#naoaprendi");
+        botaoAprendi.onclick = aprendeu;
+        botaoNaoAprendi.onclick = naoAprendeu;
+
+        function aprendeu() {
+            alert("O instrutor fica muito contente")
+
+        }
+        function naoAprendeu() {
+            alert("O instrutor não vai desistir até você virar um cangaceiro!")
+        }
+
+
+
+    </script>
+</body>
+
+</html>

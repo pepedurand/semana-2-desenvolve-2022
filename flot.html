@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div><canvas width="600" height="400"></canvas></div>
+    <style>
+        div {
+
+            margin-top: 180px;
+            margin-left: 480px;
+
+        }
+    </style>
+
+
+    <script>
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+        pincel.fillStyle = 'lightgray';
+        pincel.fillRect(0, 0, 600, 400);
+
+        function desenhaQuadrado(posicaoEmX, posicaoEmY, altura, largura, corPreenchimento, corContorno) {
+
+            pincel.fillStyle = corPreenchimento;
+            pincel.strokeStyle = corContorno;
+            pincel.beginPath();
+            pincel.rect(posicaoEmX, posicaoEmY, largura, altura);
+            pincel.strokeRect(posicaoEmX, posicaoEmY, largura, altura);
+            pincel.fill();
+        }
+
+        desenhaQuadrado(100, 150, 100, 100, "green", "black");
+        desenhaQuadrado(200, 150, 100, 100, "green", "black");
+        desenhaQuadrado(300, 150, 100, 100, "green", "black");
+        desenhaQuadrado(400, 150, 100, 100, "white", "black");
+
+    </script>
+</body>
+
+</html>

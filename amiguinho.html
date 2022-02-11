@@ -1,0 +1,68 @@
+<meta charset="UTF-8">
+<canvas width="800" height="300"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgrey';
+    pincel.fillRect(0,0,800,300);
+
+    function desenhaNumerador(x, y, lado, corNumerador) {
+        pincel.fillStyle = corNumerador;
+        pincel.fillRect(x, y, lado, lado);
+        pincel.strokeRect(x, y, lado, lado);
+        pincel.strokeStyle = 'black';
+    }
+
+    function desenhaDenominador(x, y, lado, corDenominador) {
+        pincel.fillStyle = corDenominador;
+        pincel.fillRect(x, y, lado, lado);
+        pincel.strokeRect(x, y, lado, lado);
+        pincel.strokeStyle = 'black';
+    }
+
+    var x = 50;
+    var y = 100;
+    var lado = 100;
+    var corNumerador = 'darkgreen';
+    var corDenominador = 'white';
+
+    var numerador = parseInt(prompt('Informe o numerador da fração:'));
+    var denominador = parseInt(prompt('Informe o denominador da fração:'));
+
+    function desenhaFracao(){
+        var n = 0;
+        while(n < numerador){
+            desenhaNumerador(x, y, lado, corNumerador);
+            n++;
+            x += 100;
+        }
+        if(numerador < denominador){
+            denominadorDesenho = denominador - numerador;
+            var d = 0;
+
+            while(d < denominadorDesenho){
+                desenhaNumerador(x, y, lado, corDenominador);
+                d++;
+                x += 100;
+            }
+        }
+    }
+
+    function desenhaTexto(texto, x , y) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.font='20px Georgia';
+        pincel.fillStyle='black';
+        pincel.fillText(texto, x, y);    
+    }
+
+
+    desenhaTexto('Qual é a fração?', 50, 50);
+    desenhaFracao();
+    desenhaTexto(numerador + '/' + denominador, 50, 250);
+
+</script>

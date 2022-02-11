@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+
+    </style>
+</head>
+<body>
+
+
+
+
+
+    <div>
+        <canvas width="600" height="400"></canvas>
+
+    </div>
+
+
+    <style>
+        div {
+            position: absolute;
+            top: 30%;
+            left: 40%;
+
+        }
+
+    </style>
+    
+
+
+    <script>
+
+        var tela = document.querySelector("canvas");
+        var pincel = tela.getContext ("2d");
+
+        //cabeca
+        pincel.fillStyle = "red";
+        pincel.fillRect(0, 0, 350, 300);
+
+       //olho esquerdo
+        pincel.fillStyle = "blue";
+        pincel.beginPath ();
+        pincel.moveTo (50, 70);
+        pincel.lineTo (50, 160);
+        pincel.lineTo (140, 160);
+        pincel.lineTo (140, 70);
+        pincel.fill ();
+
+        //olho direito
+        pincel.fillStyle = "black";
+        pincel.beginPath ();
+        pincel.moveTo (300, 70);
+        pincel.lineTo (300, 160);
+        pincel.lineTo (210, 160);
+        pincel.lineTo (210, 70);
+        pincel.fill ();
+
+        //nariz
+        pincel.fillStyle = "black";
+        pincel.beginPath ();
+        pincel.moveTo (140, 160);
+        pincel.lineTo (210, 160);
+        pincel.lineTo (210, 260);
+        pincel.lineTo (140, 260);
+        pincel.fill ();
+
+        //boca 1/2 coordenadas (x, y)
+        pincel.fillStyle = "black";
+        pincel.beginPath ();
+        pincel.moveTo (100, 190);
+        pincel.lineTo (140, 190);
+        pincel.lineTo (140, 300);
+        pincel.lineTo (100, 300);
+        pincel.fill ();
+
+        //boca 1/2 coordenadas (x, y)
+        pincel.fillStyle = "black";
+        pincel.beginPath ();
+        pincel.moveTo (210, 190);
+        pincel.lineTo (250, 190);
+        pincel.lineTo (250, 300);
+        pincel.lineTo (210, 300);
+        pincel.fill ();
+
+
+
+
+
+
+    </script>
+
+
+    
+</body>
+</html>
